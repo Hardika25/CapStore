@@ -1,0 +1,42 @@
+<!-- <div  class="jumbotron container">
+
+    <h1><font style="text-align: center">Inventory Details</font></h1>
+    <table class="table table-striped table table-hover">
+
+        <tr>
+            <td>Show Products</td>
+            <td><input type="text" name="PID" id="PID"/> </td>
+        </tr>
+
+        <tr>
+            <td><input type="button" value="addproduct"/></td>
+        </tr>
+
+        <tr>
+                <td><input type="button" value="DeleteProduct"/></td>
+            </tr>
+        </table>
+        </div> -->
+<div class="jumbotron container">
+    <h1>
+        <font style="text-align: center">Inventory Details</font>
+    </h1>
+    <table class="table table-striped table table-hover">
+        <tr>
+            <td>Product Id</td>
+            <td>Product Name</td>
+            <td>Product quantity</td>
+        </tr>
+
+        <tr *ngFor="let pro of inv">
+            <td>{{pro.productID}}</td>
+            <td>{{pro.productName}}</td>
+            <td>{{pro.quantity}}</td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Add" (click)="addProduct()" /></td>
+        </tr>
+
+
+    </table>
+</div>
